@@ -13,8 +13,8 @@ namespace dockertraining.Controllers
     [ApiController]
     public class MoviesController : ControllerBase
     {
-        private readonly MoviesRepository repository;
-        public MoviesController(MoviesRepository repo)
+        private readonly IRepository<Movie> repository;
+        public MoviesController(IRepository<Movie> repo)
         {
             repository = repo;
         }
@@ -56,7 +56,7 @@ namespace dockertraining.Controllers
             }
         }
 
-        // PUT api/<MoviesController>/5
+        
         
     }
 }
